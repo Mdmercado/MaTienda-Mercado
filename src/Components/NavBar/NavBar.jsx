@@ -2,17 +2,21 @@ import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+import CartWidget from "../Cartwidget/CartWidget";
 import "./NavBar.css";
 
 function NavBar() {
 	return (
-		<Navbar fixed="top" variant="dark" bg="dark" expand="lg">
+		<Navbar variant="dark" bg="dark" expand="lg">
 			<Container className="justify-content-center">
 				<Navbar.Brand href="#inicio">
 					<div className="navbar-logo"></div>
 				</Navbar.Brand>
 				<Navbar.Brand href="#inicio" className="navbar-title">
 					MaTienda
+				</Navbar.Brand>
+				<Navbar.Brand href="#cart" className="navbar-cart">
+					<CartWidget />
 				</Navbar.Brand>
 				<NavbarToggle aria-controls="nav-collapse" />
 				<NavbarCollapse id="nav-collapse" className="justify-content-center">
