@@ -1,8 +1,13 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import "../ItemListContainer/ItemListContainer.css";
 
-function ItemListContainer({ greeting }) {
+import "../ItemListContainer/ItemListContainer.css";
+import ItemCount from "../ItemCount/ItemCount";
+function ItemListContainer({ greeting, setCartCant }) {
+	const onAdd = (items) => {
+		setCartCant(items);
+		console.log("agregando " + items + " productos");
+	};
+
 	return (
 		<div className="container">
 			<div className="items-title">
@@ -10,8 +15,8 @@ function ItemListContainer({ greeting }) {
 			</div>
 			<div className="item">
 				<p className="item--paragraph">{greeting}</p>
-				<div className="item--button">
-					<Button variant="primary">Agregar Al Carrito</Button>
+				<div className="item--Amount">
+					<ItemCount stock={5} initial={1} onAdd={onAdd} />
 				</div>
 			</div>
 		</div>
