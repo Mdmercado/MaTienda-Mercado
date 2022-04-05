@@ -5,7 +5,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import CartWidget from "../Cartwidget/CartWidget";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ cant }) {
 	return (
 		<Navbar variant="dark" bg="dark" expand="lg">
 			<Container className="justify-content-center">
@@ -16,7 +16,7 @@ function NavBar() {
 					MaTienda
 				</Navbar.Brand>
 				<Navbar.Brand href="#cart" className="navbar-cart">
-					<CartWidget />
+					<CartWidget cant={cant} />
 				</Navbar.Brand>
 				<NavbarToggle aria-controls="nav-collapse" />
 				<NavbarCollapse id="nav-collapse" className="justify-content-center">
