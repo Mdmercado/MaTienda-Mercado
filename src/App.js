@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 function App() {
   const [cartNumber, setCartNumber] = useState(0)
-
   return (
     <>
       <div className="App">
@@ -14,7 +13,7 @@ function App() {
           <NavBar cant={cartNumber} />
         </div>
         <div className='App-main'>
-          <ItemListContainer greeting="Hola Producto" setCartCant={setCartNumber} />
+          <ItemListContainer setCartCant={setCartNumber} />
         </div>
       </div>
     </>

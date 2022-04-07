@@ -1,0 +1,15 @@
+.itemList {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+@media (max-width: 640px) {
+	.itemList {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		align-items: center;
+	}
+}

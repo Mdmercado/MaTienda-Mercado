@@ -1,0 +1,13 @@
+.item {
+	margin: 30px auto;
+	width: 200px;
+	height: 350px;
+	border: 1px solid #000;
+	text-align: center;
+}
+.itemImage img {
+	height: 175px;
+	width: 100%;
+	object-fit: cover;
+	padding: 1px;
+}
