@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../ItemListContainer/ItemListContainer.css";
-import productos from "../../Utils/productos.js";
+import { productos } from "../../Utils/productos.js";
 import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer({ setCartCant }) {
