@@ -1,9 +1,10 @@
 .container {
 	width: 80%;
 }
+.carga {
+	display: flex;
+	justify-content: center;
+}
 .items-title {
 	text-align: center;
 }
-
-
-

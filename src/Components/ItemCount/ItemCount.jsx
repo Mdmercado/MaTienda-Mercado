@@ -52,7 +52,7 @@ function ItemCount({ stock, onAdd, initial }) {
 			</div>
 			{zeroStock && <p className="text-center text-danger">Sin Stock</p>}
 			{notStock && (
-				<p className="text-center text-danger">
+				<p className="text-center text-danger alerta">
 					limite de stock alcanzado {stock}
 				</p>
 			)}

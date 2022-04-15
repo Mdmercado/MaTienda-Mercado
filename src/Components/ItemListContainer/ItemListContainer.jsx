@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../ItemListContainer/ItemListContainer.css";
 import { productos } from "../../Utils/productos.js";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
+import "../ItemListContainer/ItemListContainer.css";
 
 function ItemListContainer({ setCartCant }) {
 	const onAdd = (items) => {
@@ -10,24 +13,45 @@ function ItemListContainer({ setCartCant }) {
 	};
 
 	const [productsState, setProductsState] = useState([]);
+	const [loading, setsetLoading] = useState();
 
-	useEffect(() => {
-		const llenar = new Promise((resolve, reject) => {
+	const { categoryId } = useParams();
+
+	const getProductos = (categoryId) => {
+		return new Promise((resolve, reject) => {
+			const filtro = productos.filter((p) => p.category === categoryId);
 			setTimeout(() => {
-				resolve(productos);
+				categoryId ? resolve(filtro) : resolve(productos);
 			}, 2000);
 		});
+	};
 
-		llenar.then((res) => setProductsState(res));
-		llenar.catch((error) => console.log(error));
-	}, [productsState]);
+	useEffect(() => {
+		setsetLoading(true);
+		getProductos(categoryId)
+			.then((res) => setProductsState(res))
+			.catch((error) => console.log(error))
+			.finally(() => {
+				setsetLoading(false);
+			});
+	}, [categoryId]);
 
 	return (
 		<div className="container">
-			<div className="items-title">
-				<h1>Productos Destacados</h1>
-			</div>
-			<ItemList onAdd={onAdd} productos={productsState} />
+			{loading ? (
+				<div className="carga">
+					<Spinner animation="border" role="status" variant="secondary">
+						<span className="visually-hidden">Loading...</span>
+					</Spinner>
+				</div>
+			) : (
+				<>
+					<div className="items-title">
+						<h1>Productos Destacados</h1>
+					</div>
+					<ItemList onAdd={onAdd} productos={productsState} />
+				</>
+			)}
 		</div>
 	);
 }

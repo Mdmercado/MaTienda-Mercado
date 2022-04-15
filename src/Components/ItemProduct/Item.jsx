@@ -1,18 +1,28 @@
 import React from "react";
-import "./Item.css";
-import ItemCount from "../ItemCount/ItemCount";
-
+import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "../ItemProduct/item.css";
 function Item({ id, nombre, precio, imagen, onAdd }) {
+	const navigate = useNavigate();
+
 	return (
-		<div className="item">
-			<div className="itemImage">
-				<img src={imagen} alt="foto" />
-			</div>
-			<div className="itemData">
-				<h3>{nombre}</h3>
-				<h4>{precio}</h4>
-			</div>
-			<ItemCount stock={5} initial={1} onAdd={onAdd} />
+		<div className="item m-5">
+			<Card>
+				<Card.Img variant="top" src={imagen} className="image" />
+				<Card.Body className="body ">
+					<Card.Title>{nombre}</Card.Title>
+					<Card.Text className="text-center">{precio}</Card.Text>
+				</Card.Body>
+				<Card.Footer>
+					<Button
+						onClick={() => {
+							navigate(`item/${id}`);
+						}}>
+						{" "}
+						Ir a Detalle
+					</Button>
+				</Card.Footer>
+			</Card>
 		</div>
 	);
 }

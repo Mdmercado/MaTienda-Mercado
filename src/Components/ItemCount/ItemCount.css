@@ -1,15 +1,15 @@
-.countArea{
-  padding:5px;
-  margin: 3px 0;
-  width: 100%;
-  background-color: #F7F7F7;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
+.countArea {
+	padding: 5px;
+	margin: 3px 0;
+	width: 100%;
+	background-color: #f7f7f7;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-.item--button{
-  margin: 5px 0;
+.item--button {
+	margin: 5px 0;
 }
-p{
-  font-size: 12px;
+.alerta {
+	font-size: 12px;
 }
