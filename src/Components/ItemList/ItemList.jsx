@@ -8,6 +8,7 @@ function ItemList({ onAdd, productos }) {
 			{productos.map((i) => (
 				<Item
 					key={i.id}
+					id={i.id}
 					nombre={i.nombre}
 					precio={i.precio}
 					imagen={i.imagen}

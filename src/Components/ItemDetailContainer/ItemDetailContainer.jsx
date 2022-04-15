@@ -1,24 +1,47 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { productoDetail } from "../../Utils/productos.js";
+import { productos } from "../../Utils/productos.js";
+import { useParams } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
 
-function ItemDetailContainer({ setCart }) {
-	const [producto, setproducto] = useState({});
+export default function ItemDetailContainer({ setCart }) {
+	const { id } = useParams();
+	const [producto, setproducto] = useState([]);
+	const [loading, setLoading] = useState(false);
 	const onAdd = (items) => {
 		setCart(items);
-		console.log("agregando " + items + " productos");
 	};
-	useEffect(() => {
-		const getItem = new Promise((resolve, reject) => {
+
+	const getOneProduct = (id) => {
+		return new Promise((resolve, reject) => {
+			const productoElegido = productos.find((p) => p.id === Number(id));
 			setTimeout(() => {
-				resolve(productoDetail);
-			}, 1000);
+				resolve(productoElegido);
+			}, 2000);
 		});
+	};
 
-		getItem.then((res) => setproducto(res));
-		getItem.catch((error) => console.log(error));
-	}, []);
-	return <>{<ItemDetail producto={producto} onAdd={onAdd} />}</>;
+	useEffect(() => {
+		setLoading(true);
+		getOneProduct(id)
+			.then((res) => setproducto(res))
+			.catch((error) => console.log(error))
+			.finally(() => {
+				setLoading(false);
+			});
+	}, [id]);
+
+	return (
+		<>
+			{loading ? (
+				<div className="carga">
+					<Spinner animation="border" role="status" variant="secondary">
+						<span className="visually-hidden">Loading...</span>
+					</Spinner>
+				</div>
+			) : (
+				<ItemDetail producto={producto} onAdd={onAdd} />
+			)}
+		</>
+	);
 }
-
-export default ItemDetailContainer;
