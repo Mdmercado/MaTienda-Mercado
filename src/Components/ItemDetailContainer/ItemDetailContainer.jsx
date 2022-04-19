@@ -4,13 +4,10 @@ import { productos } from "../../Utils/productos.js";
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 
-export default function ItemDetailContainer({ setCart }) {
+export default function ItemDetailContainer() {
 	const { id } = useParams();
 	const [producto, setproducto] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const onAdd = (items) => {
-		setCart(items);
-	};
 
 	const getOneProduct = (id) => {
 		return new Promise((resolve, reject) => {
@@ -40,7 +37,7 @@ export default function ItemDetailContainer({ setCart }) {
 					</Spinner>
 				</div>
 			) : (
-				<ItemDetail producto={producto} onAdd={onAdd} />
+				<ItemDetail producto={producto} />
 			)}
 		</>
 	);

@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../ItemDetail/ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { Col } from "react-bootstrap";
-function ItemDetail({ producto, onAdd }) {
+import { Button, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+function ItemDetail({ producto }) {
+	const [cantidad, setCantidad] = useState(0);
+	const [viewCount, setViewCount] = useState(true);
+
+	const onAdd = (cant) => {
+		setCantidad(cant);
+		setViewCount(false);
+	};
+	console.log(cantidad);
 	return (
 		<>
 			<div className="itemDetail-title">
@@ -16,9 +25,35 @@ function ItemDetail({ producto, onAdd }) {
 					<h2 className="mb-2">{producto.nombre}</h2>
 					<h5>{producto.resumen}</h5>
 					<h3>{producto.precio}</h3>
-					<Col sm={12} md={8}>
-						<ItemCount stock={10} initial={5} onAdd={onAdd} />
-					</Col>
+					{viewCount ? (
+						<Col sm={12} md={8}>
+							<ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+						</Col>
+					) : (
+						<>
+							<Col sm={12} md={8} className="text-center">
+								<Button
+									className="detail-button"
+									onClick={() => setViewCount(true)}
+									size="lg"
+									variant="outline-primary">
+									Reanudar Compra
+								</Button>
+							</Col>
+
+							<Col sm={12} md={8} className="text-center">
+								<Link to={"/cart"}>
+									<Button
+										className="detail-button"
+										size="lg"
+										variant="outline-primary">
+										Ir al Carrito
+									</Button>
+								</Link>
+							</Col>
+						</>
+					)}
+
 					<p className="fw-bold mt-3">Modelo: {producto.modelo}</p>
 					<p>{producto.descripcion}</p>
 				</Col>

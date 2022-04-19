@@ -1,6 +1,7 @@
 export const productos = [
   {
     id: 1,
+    stock: 10,
     category: 'mate',
     nombre: 'Mate Camionero',
     modelo: 'Camionero',
@@ -11,6 +12,7 @@ export const productos = [
   },
   {
     id: 2,
+    stock: 8,
     category: 'mate',
     nombre: 'Mate Camionero con base alpaca',
     modelo: 'Camionero',
@@ -21,6 +23,7 @@ export const productos = [
   },
   {
     id: 3,
+    stock: 2,
     category: 'mate',
     nombre: 'MATE TORPEDO - BASE CUATRO APOYOS',
     modelo: 'Torpedo',
@@ -31,6 +34,7 @@ export const productos = [
   },
   {
     id: 4,
+    stock: 4,
     category: 'mate',
     nombre: 'mate imperial-cincelado-con bronce',
     modelo: 'Imperial',
@@ -41,6 +45,7 @@ export const productos = [
   },
   {
     id: 5,
+    stock: 15,
     category: 'bombilla',
     nombre: 'BOMBILLA URUGUAYA DE ALPACA - CHUPETE FINO',
     modelo: 'bombilla alpaca',
@@ -50,6 +55,7 @@ export const productos = [
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957541/matienda/bombilla-matiendaAlpaca_q3n5bl.jpg',
   }, {
     id: 6,
+    stock: 10,
     category: 'bombilla',
     nombre: 'BOMBILLA PICO LORO ',
     modelo: 'bombilla alpaca',
@@ -59,6 +65,7 @@ export const productos = [
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957730/matienda/bombilla-matiendaPicoloro_xeujvu.png',
   }, {
     id: 7,
+    stock: 11,
     category: 'termo',
     nombre: 'TERMO STANLEY POLAR739 ML SIN MANIJA ',
     modelo: 'STANLEY POLAR739',
@@ -67,6 +74,7 @@ export const productos = [
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957954/matienda/termoStanley-matienda_tcnew8.png',
   }, {
     id: 8,
+    stock: 5,
     category: 'termo',
     nombre: 'TERMO TERMOLAR R-EVOLUTION 1 LITRO',
     modelo: 'R-Evolution',
@@ -77,6 +85,7 @@ export const productos = [
   },
   {
     id: 9,
+    stock: 6,
     category: 'termo',
     nombre: 'TERMO COLEMAN 1.2 LITROS',
     modelo: 'COLEMAN 1,200 L',
