@@ -20,8 +20,14 @@
 }
 .product-image img {
 	width: 450px;
-	height: 500px;
+	height: 600px;
 	object-fit: cover;
+}
+.detail-button {
+	width: 100%;
+}
+a {
+	margin: 0 !important;
 }
 
 @media (max-width: 768px) {
