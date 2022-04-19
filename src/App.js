@@ -2,6 +2,7 @@
 import './App.css';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
+import Cart from './Components/Cart.jsx'
 import NavBar from './Components/NavBar/NavBar';
 import { useState } from 'react';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<ItemListContainer setCartCant={setCartNumber} />} />
         <Route exact path='/category/:categoryId' element={<ItemListContainer />} />
-        <Route exact path='/item/:id' element={<ItemDetailContainer setCart={setCartNumber} />} />
+        <Route exact path='/item/:id' element={<ItemDetailContainer />} />
+        <Route exact path='/cart' element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );
