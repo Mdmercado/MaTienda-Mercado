@@ -45,7 +45,10 @@ function ItemCount({ stock, onAdd, initial }) {
 				<Button onClick={() => sub()} disabled={bloquea}>
 					-
 				</Button>
-				<div className="countArea-number">{cant}</div>
+				<div className="countArea-number">
+					{`Cantidad: ${cant}`}{" "}
+					<p className="text-secondary">{`  (disponibles: ${stock})`}</p>
+				</div>
 				<Button onClick={() => add()} disabled={notStock}>
 					+
 				</Button>

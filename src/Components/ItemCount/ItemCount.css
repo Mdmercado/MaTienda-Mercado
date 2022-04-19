@@ -7,6 +7,13 @@
 	align-items: center;
 	justify-content: space-between;
 }
+.countArea-number {
+	display: flex;
+	align-items: center;
+}
+.countArea-number p {
+	margin: 0 3px;
+}
 .item--button {
 	margin: 5px 0;
 }
