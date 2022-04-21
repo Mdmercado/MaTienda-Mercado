@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import "../ItemCount/ItemCount.css";
@@ -64,7 +63,7 @@ function ItemCount({ stock, onAdd, initial }) {
 					onClick={() => onAdd(cant)}
 					variant="primary"
 					disabled={bloquea}>
-					Agregar Al Carrito
+					Añadir al carrito
 				</Button>
 			</div>
 		</>
