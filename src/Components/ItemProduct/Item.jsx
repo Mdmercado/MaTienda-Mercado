@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../ItemProduct/item.css";
+import "../ItemProduct/Item.css";
 function Item({ id, nombre, precio, imagen, onAdd }) {
 	return (
 		<div className="item m-5">

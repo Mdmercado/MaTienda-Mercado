@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../ItemDetail/ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Button, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/cartContext";
+
 function ItemDetail({ producto }) {
-	const [cantidad, setCantidad] = useState(0);
 	const [viewCount, setViewCount] = useState(true);
 
+	const { addItem, productsAdd } = useContext(CartContext);
+
 	const onAdd = (cant) => {
-		setCantidad(cant);
 		setViewCount(false);
+		addItem(producto, cant);
 	};
-	console.log(cantidad);
+
+	console.log(productsAdd);
+
 	return (
 		<>
 			<div className="itemDetail-title">
@@ -34,7 +39,9 @@ function ItemDetail({ producto }) {
 							<Col sm={12} md={8} className="text-center">
 								<Button
 									className="detail-button"
-									onClick={() => setViewCount(true)}
+									onClick={() => {
+										setViewCount(true);
+									}}
 									size="lg"
 									variant="outline-primary">
 									Reanudar Compra
