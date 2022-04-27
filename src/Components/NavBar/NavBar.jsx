@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/cartContext";
 import CartWidget from "../Cartwidget/CartWidget";
 import "./NavBar.css";
 
-function NavBar({ cant }) {
+function NavBar() {
+	const { productsAdd, showTotal } = useContext(CartContext);
+
+	useEffect(() => {
+		showTotal();
+	}, [productsAdd]);
 	return (
 		<Navbar className="mb-5" variant="dark" bg="dark" expand="lg">
 			<Container className="justify-content-center">
@@ -16,9 +22,11 @@ function NavBar({ cant }) {
 				<Navbar.Brand as={Link} to="/" className="navbar-title">
 					MaTienda
 				</Navbar.Brand>
-				<Navbar.Brand href="#cart" className="navbar-cart">
-					<CartWidget cant={cant} />
-				</Navbar.Brand>
+				{productsAdd.length > 0 && (
+					<Navbar.Brand as={Link} to="/cart" className="navbar-cart">
+						<CartWidget />
+					</Navbar.Brand>
+				)}
 				<NavbarToggle aria-controls="nav-collapse" />
 				<NavbarCollapse id="nav-collapse" className="justify-content-center">
 					<Nav as="ul">

@@ -3,7 +3,11 @@ import React, { createContext, useState } from "react";
 export const CartContext = createContext();
 
 const CartContexProvider = ({ children }) => {
+	let cantidadTotal = 0;
+	let precio = 0;
 	const [productsAdd, setproductsAdd] = useState([]);
+	const [ItemsTotales, setItemsTotales] = useState(0);
+	const [preciofinal, setPreciofinal] = useState(0);
 
 	const isInCart = (id) => {
 		const exist = productsAdd.findIndex((item) => item.item.id === id);
@@ -30,14 +34,22 @@ const CartContexProvider = ({ children }) => {
 	};
 
 	const removeItem = (itemId) => {
-		console.log(`Se eliminara producto con id ${itemId}`);
-
 		setproductsAdd(productsAdd.filter((p) => p.item.id !== itemId));
 	};
 
 	const clear = () => {
-		console.log(`Esta function limpia/elimina todos los productos`);
 		setproductsAdd([]);
+	};
+
+	const showTotal = () => {
+		productsAdd.map((item) => {
+			return (
+				(cantidadTotal = cantidadTotal + item.cantidad),
+				(precio = precio + item.item.precio * item.cantidad)
+			);
+		});
+		setItemsTotales(cantidadTotal);
+		setPreciofinal(precio);
 	};
 
 	return (
@@ -48,6 +60,9 @@ const CartContexProvider = ({ children }) => {
 				removeItem,
 				clear,
 				isInCart,
+				showTotal,
+				ItemsTotales,
+				preciofinal,
 			}}>
 			{children}
 		</CartContext.Provider>

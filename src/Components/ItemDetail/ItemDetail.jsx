@@ -8,14 +8,12 @@ import { CartContext } from "../../Context/cartContext";
 function ItemDetail({ producto }) {
 	const [viewCount, setViewCount] = useState(true);
 
-	const { addItem, productsAdd } = useContext(CartContext);
+	const { addItem } = useContext(CartContext);
 
 	const onAdd = (cant) => {
 		setViewCount(false);
 		addItem(producto, cant);
 	};
-
-	console.log(productsAdd);
 
 	return (
 		<>
@@ -29,7 +27,7 @@ function ItemDetail({ producto }) {
 				<Col sm={12} md={6} className="product-details">
 					<h2 className="mb-2">{producto.nombre}</h2>
 					<h5>{producto.resumen}</h5>
-					<h3>{producto.precio}</h3>
+					<h3>${producto.precio}</h3>
 					{viewCount ? (
 						<Col sm={12} md={8}>
 							<ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
@@ -37,15 +35,14 @@ function ItemDetail({ producto }) {
 					) : (
 						<>
 							<Col sm={12} md={8} className="text-center">
-								<Button
-									className="detail-button"
-									onClick={() => {
-										setViewCount(true);
-									}}
-									size="lg"
-									variant="outline-primary">
-									Reanudar Compra
-								</Button>
+								<Link to={"/"}>
+									<Button
+										className="detail-button"
+										size="lg"
+										variant="outline-primary">
+										Reanudar Compra
+									</Button>
+								</Link>
 							</Col>
 
 							<Col sm={12} md={8} className="text-center">
@@ -54,7 +51,7 @@ function ItemDetail({ producto }) {
 										className="detail-button"
 										size="lg"
 										variant="outline-primary">
-										Ir al Carrito
+										Terminar Compra
 									</Button>
 								</Link>
 							</Col>
