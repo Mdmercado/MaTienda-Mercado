@@ -1,12 +1,16 @@
-import React from "react";
-import { FaCartPlus } from "react-icons/fa";
+import React, { useEffect, useContext } from "react";
+import { CartContext } from "../../Context/cartContext";
+
 import "../Cartwidget/CartWidget.css";
 
-function CartWidget({ cant }) {
+function CartWidget() {
+	const { ItemsTotales, productsAdd, showTotal } = useContext(CartContext);
+
+	useEffect(() => {}, [productsAdd]);
 	return (
 		<div className="faCart">
-			<FaCartPlus className="faCart--icon" />
-			<p>{cant}</p>
+			<h3>🛒</h3>
+			<p>{ItemsTotales}</p>
 		</div>
 	);
 }

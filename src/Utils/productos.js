@@ -7,7 +7,7 @@ export const productos = [
     modelo: 'Camionero',
     resumen: 'Mate de Calabaza forrado en Cuero con Virola de Acero Inoxidable',
     descripcion: 'El Mate que se muestra en la imágen es único, todos los mates varían segun de acuerdo a la calabaza, madera, cerámica. El mate se arma según la calabaza, madera o cerámica por los que todos son diferentes. Para saber si hay stock y tamaño a gusto, consultar vía WhatsApp. ',
-    precio: "$3500",
+    precio: 3500,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649708358/matienda/matienda-Camionero1_daooq2.jpg',
   },
   {
@@ -18,7 +18,7 @@ export const productos = [
     modelo: 'Camionero',
     resumen: 'Mate Camionero con Base de Alpaca y Virola Cincelada ',
     descripcion: 'El Mate que se muestra en la imágen es único, todos los mates varían segun de acuerdo a la calabaza, madera, cerámica. El mate se arma según la calabaza, madera o cerámica por los que todos son diferentes. Para saber si hay stock y tamaño a gusto, consultar vía WhatsApp. ',
-    precio: "$7500",
+    precio: 7500,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649956754/matienda/camionerobaseAlpaca_dah4vl.jpg',
   },
   {
@@ -29,7 +29,7 @@ export const productos = [
     modelo: 'Torpedo',
     resumen: 'Mate de Calabaza con Virola de Acero Inoxidable Uruguayo',
     descripcion: 'El Mate que se muestra en la imágen es único, todos los mates varían segun de acuerdo a la calabaza, madera, cerámica. El mate se arma según la calabaza, madera o cerámica por los que todos son diferentes. Para saber si hay stock y tamaño a gusto, consultar vía WhatsApp. ',
-    precio: "$3970",
+    precio: 3970,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649956875/matienda/matetorpedo_g3tov4.jpg',
   },
   {
@@ -40,7 +40,7 @@ export const productos = [
     modelo: 'Imperial',
     resumen: 'Mates de Calabaza forrados en cuero, con virola de alpaca labrada artesanalmente y apliques de Bronce',
     descripcion: 'El Mate que se muestra en la imágen es único, todos los mates varían segun de acuerdo a la calabaza, madera, cerámica. El mate se arma según la calabaza, madera o cerámica por los que todos son diferentes. Para saber si hay stock y tamaño a gusto, consultar vía WhatsApp. ',
-    precio: "$8.000",
+    precio: 8000,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957087/matienda/imperial-matienda_llfxvr.jpg',
   },
   {
@@ -51,7 +51,7 @@ export const productos = [
     modelo: 'bombilla alpaca',
     resumen: '¡BOMBILLA URUGUAYA DE ALPACA!',
     descripcion: 'Fabricada artesanalmente, resistente a la corrosión e inoxidable, no propaga el calor. Las bombillas son de alpaca mexicana soldadas con plata, lijadas y pulidas a mano.',
-    precio: "$4.424",
+    precio: 4424,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957541/matienda/bombilla-matiendaAlpaca_q3n5bl.jpg',
   }, {
     id: 6,
@@ -61,7 +61,7 @@ export const productos = [
     modelo: 'bombilla alpaca',
     resumen: 'Bombilla Pico de Loro Caño Fino ',
     descripcion: 'Cilindro Desarmable',
-    precio: "$1.127",
+    precio: 1127,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957730/matienda/bombilla-matiendaPicoloro_xeujvu.png',
   }, {
     id: 7,
@@ -70,7 +70,7 @@ export const productos = [
     nombre: 'TERMO STANLEY POLAR739 ML SIN MANIJA ',
     modelo: 'STANLEY POLAR739',
     resumen: 'Stanley Polar 739 ml sin manija ',
-    precio: "$17.815",
+    precio: 17815,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649957954/matienda/termoStanley-matienda_tcnew8.png',
   }, {
     id: 8,
@@ -80,7 +80,7 @@ export const productos = [
     modelo: 'R-Evolution',
     descripcion: 'Modelos: Liso o Con Estampado de Gaucho.',
     resumen: 'Acero inoxidable, Pico cebador,1 L',
-    precio: "$13.430",
+    precio: 13430,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649958195/matienda/termolar-matienda_osrisw.jpg'
   },
   {
@@ -91,7 +91,7 @@ export const productos = [
     modelo: 'COLEMAN 1,200 L',
     descripcion: 'Colores: Verde, Negro y Arena. Construido en Acero Inoxidable 18/8 de triple capa y aislamiento al vacio. Tapa/Vaso Termico y la base de goma permite un apoyo firme y suave, evitando el deterioro con el uso. ',
     resumen: 'TERMO COLEMAN DE ACERO INOXIDABLE.',
-    precio: "$14.563",
+    precio: 14563,
     imagen: 'https://res.cloudinary.com/ma-tiendamercado/image/upload/v1649958527/matienda/coleman-matienda_ikrmn4.jpg'
   }
 ]

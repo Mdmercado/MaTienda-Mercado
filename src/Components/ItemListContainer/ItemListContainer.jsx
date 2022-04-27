@@ -6,12 +6,7 @@ import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import "../ItemListContainer/ItemListContainer.css";
 
-function ItemListContainer({ setCartCant }) {
-	const onAdd = (items) => {
-		setCartCant(items);
-		console.log("agregando " + items + " productos");
-	};
-
+function ItemListContainer() {
 	const [productsState, setProductsState] = useState([]);
 	const [loading, setsetLoading] = useState();
 
@@ -49,7 +44,7 @@ function ItemListContainer({ setCartCant }) {
 					<div className="items-title">
 						<h1>Productos Destacados</h1>
 					</div>
-					<ItemList onAdd={onAdd} productos={productsState} />
+					<ItemList productos={productsState} />
 				</>
 			)}
 		</div>
