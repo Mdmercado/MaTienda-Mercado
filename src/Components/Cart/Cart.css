@@ -1,0 +1,18 @@
+.containerTable {
+	margin: 0 auto 80px;
+}
+
+.img-table img {
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+}
+
+.link-catalog {
+	text-decoration: none;
+	color: black !important;
+}
+.link-catalog :hover {
+	text-decoration: none;
+	color: blue !important;
+}
