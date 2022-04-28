@@ -9,9 +9,9 @@ function ItemList({ productos }) {
 				<Item
 					key={i.id}
 					id={i.id}
-					nombre={i.nombre}
-					precio={i.precio}
-					imagen={i.imagen}></Item>
+					nombre={i.name}
+					precio={i.price}
+					imagen={i.image}></Item>
 			))}
 		</div>
 	);

@@ -49,11 +49,11 @@ function Cart() {
 											<td>{index + 1}</td>
 											<td>
 												<div className="img-table">
-													<img src={item.item.imagen} alt="img-product" />
+													<img src={item.item.image} alt="img-product" />
 												</div>
 											</td>
-											<td className="text-center">{item.item.nombre}</td>
-											<td className="text-center">${item.item.precio}</td>
+											<td className="text-center">{item.item.name}</td>
+											<td className="text-center">${item.item.price}</td>
 											<td className="text-center">{item.cantidad}</td>
 											<td className="text-center">
 												<Button

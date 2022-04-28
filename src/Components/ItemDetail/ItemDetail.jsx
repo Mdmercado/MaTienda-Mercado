@@ -22,12 +22,12 @@ function ItemDetail({ producto }) {
 			</div>
 			<div className="product">
 				<Col className="product-image">
-					<img src={producto.imagen} alt={producto.resumen} />
+					<img src={producto.image} alt={producto.name} />
 				</Col>
 				<Col sm={12} md={6} className="product-details">
-					<h2 className="mb-2">{producto.nombre}</h2>
-					<h5>{producto.resumen}</h5>
-					<h3>${producto.precio}</h3>
+					<h2 className="mb-2">{producto.name}</h2>
+					<h5>{producto.summary}</h5>
+					<h3>${producto.price}</h3>
 					{viewCount ? (
 						<Col sm={12} md={8}>
 							<ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
@@ -58,8 +58,8 @@ function ItemDetail({ producto }) {
 						</>
 					)}
 
-					<p className="fw-bold mt-3">Modelo: {producto.modelo}</p>
-					<p>{producto.descripcion}</p>
+					<p className="fw-bold mt-3">Modelo: {producto.model}</p>
+					<p>{producto.description}</p>
 				</Col>
 			</div>
 		</>
