@@ -45,7 +45,7 @@ const CartContexProvider = ({ children }) => {
 		productsAdd.map((item) => {
 			return (
 				(cantidadTotal = cantidadTotal + item.cantidad),
-				(precio = precio + item.item.precio * item.cantidad)
+				(precio = precio + item.item.price * item.cantidad)
 			);
 		});
 		setItemsTotales(cantidadTotal);

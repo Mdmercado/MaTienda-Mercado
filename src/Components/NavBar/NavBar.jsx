@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
