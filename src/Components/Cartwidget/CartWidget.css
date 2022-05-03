@@ -1,10 +1,11 @@
-.faCart{
+.faCart {
 	display: flex;
+	margin: 0 5px;
 }
 .faCart--icon {
 	width: 30px;
 	height: 30px;
 }
-.faCart p{
+.faCart p {
 	margin: 1px;
 }

@@ -6,14 +6,8 @@ import { CartContext } from "../../Context/cartContext";
 import "./../Cart/Cart.css";
 
 function Cart() {
-	const {
-		productsAdd,
-		showTotal,
-		ItemsTotales,
-		preciofinal,
-		removeItem,
-		clear,
-	} = useContext(CartContext);
+	const { productsAdd, showTotal, ItemsTotales, preciofinal, removeItem } =
+		useContext(CartContext);
 
 	useEffect(() => {
 		showTotal();
@@ -99,18 +93,15 @@ function Cart() {
 									Swal.fire({
 										position: "top-end",
 										icon: "success",
-										title: "Su orden ha sigo registrada",
-										showConfirmButton: true,
-										confirmButtonText: "De acuerdo",
-										timer: 5000,
-									}).then((result) => {
-										clear();
-										if (result.isConfirmed) {
-											navigate("/");
-										}
+										title: "Ya casi terminamos..",
+										showConfirmButton: false,
+										allowOutsideClick: false,
+										timer: 2000,
+									}).then(() => {
+										navigate("/cart/checkout");
 									});
 								}}>
-								Finalizar
+								{"Siguiente >>"}
 							</Button>
 						</Col>
 					</Row>
