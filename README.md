@@ -16,7 +16,7 @@ Se trata de un ecommerce funcional, abarcativo técnicamente y enriquecedor como
 
 ## Comenzando
 
-Como dependencia principal y base del proyecto mencionar el cliente que provee ReactJs.
+Como herramienta principal y base del proyecto mencionar el ambiente de desarrollo que provee ReactJs el cual fue el inicio de todo.
 
 - [create-react-app](https://create-react-app.dev/docs/getting-started)
 
