@@ -1,10 +1,13 @@
-.container {
-	width: 80%;
+.containerList {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 .carga {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .items-title {
-	text-align: center;
+  text-align: center;
+  margin: 35px 0;
 }

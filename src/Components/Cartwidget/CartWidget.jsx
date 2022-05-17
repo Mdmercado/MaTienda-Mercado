@@ -4,15 +4,15 @@ import { CartContext } from "../../Context/cartContext";
 import "../Cartwidget/CartWidget.css";
 
 function CartWidget() {
-	const { ItemsTotales, productsAdd, showTotal } = useContext(CartContext);
+  const { ItemsTotales, productsAdd } = useContext(CartContext);
 
-	useEffect(() => {}, [productsAdd]);
-	return (
-		<div className="faCart">
-			<h3>🛒</h3>
-			<p>{ItemsTotales}</p>
-		</div>
-	);
+  useEffect(() => {}, [productsAdd]);
+  return (
+    <div className="faCart">
+      <h3>🛒</h3>
+      <p>{ItemsTotales}</p>
+    </div>
+  );
 }
 
 export default CartWidget;
