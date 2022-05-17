@@ -1,84 +1,75 @@
-# Getting Started with Create React App
+# Ma-Tienda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Proyecto Final Curso de CoderHouse ReactJs
 
-## Available Scripts
+Este proyecto se construyó con la finalidad de incorporar los conocimientos adquiridos a través de la cursada.
 
-In the project directory, you can run:
+## Descripción
 
-### `npm start`
+Se trata de un ecommerce funcional, abarcativo técnicamente y enriquecedor como idea a llevar a cabo. Consta con un catálogo de productos los cuales se pueden ampliar en detalle, comprar si poseen stock disponible, navegar en diferentes secciones. etc. Finalmente se hacen los pasos para encargar el producto y se devuelve un código de producto único por pedido.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Aspecto del sitio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### GIF
 
-### `npm test`
+![image](src/Img/matiendaCompra-gif.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Comenzando
 
-### `npm run build`
+Como dependencia principal y base del proyecto mencionar el cliente que provee ReactJs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [create-react-app](https://create-react-app.dev/docs/getting-started)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Dependencias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        "@hookform/resolvers": "^2.8.8",
+    	"@testing-library/jest-dom": "^5.16.2",
+    	"@testing-library/react": "^12.1.4",
+    	"@testing-library/user-event": "^13.5.0",
+    	"firebase": "^9.6.11",
+    	"react": "^17.0.2",
+    	"react-bootstrap": "^2.2.1",
+    	"react-dom": "^17.0.2",
+    	"react-hook-form": "^7.30.0",
+    	"react-icons": "^4.3.1",
+    	"react-router-dom": "^6.3.0",
+    	"react-scripts": "5.0.0",
+    	"sweetalert2": "^11.4.9",
+    	"web-vitals": "^2.1.4",
+    	"yup": "^0.32.11"
 
-### `npm run eject`
+### Instalación
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Para la instalacion de este proyecto se debe clonar el repositorio [https://github.com/Mdmercado/MaTienda-Mercado.git](https://github.com/Mdmercado/MaTienda-Mercado.git). Y seguir los pasos a continuación.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Ejecutando el programa
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Se deben instalar las dependencias
+- Se debe utilizar el comando adecuado
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm install
+then >>
+npm start
+```
 
-## Learn More
+## Autor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Made with ❤️ Marcos Daniel Mercado
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [GitHub](https://github.com/Mdmercado)
+- [LinkedIn](https://www.linkedin.com/in/marcos-mercado-/)
 
-### Code Splitting
+## Aclaraciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este espacio lo voy a utilizar para explicar porque utilize algunas de las dependencias que no eran necesarias y propuestas por el curso.
 
-### Analyzing the Bundle Size
+- Las dependencias **React-Bootstrap y Bootstrap** las utilice debido a que es la que mas familiar y sencilla se me hace a la hora de hacer la UI de un sitio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Las dependencias **React hook form y yup**, las utilice principalmente por su versatibilidad y sencillez a la hora de trabajar con formularios en ReactJs.
 
-### Making a Progressive Web App
+- La dependencia **SweetAlert2** la utilice debido a su bonita apariencia a la hora de implementar alertas e interactuar con el usuario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- La dependencia **React-Icons** la utilice simplemente para implementar iconos.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-INSTALAR LA CLI DE FIREBASE TOOLS
-npm install -g firebase-tools
-
-## PARA DEPLOY PRIMERA VEZ:
-
-firebase login
-
-firebase init
-(no olvidarse de usar build como public directory!)
-(solo la primera vez luego no!)
-
-Primero crear el build local con: npm run build
-y luego: firebase deploy
+- La dependencia **React-Router-dom** se utiliza para la navegacion de la SPA.
