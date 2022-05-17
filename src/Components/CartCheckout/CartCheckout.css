@@ -1,3 +1,12 @@
-.container {
-	text-transform: none;
+.container .alert {
+  text-transform: none;
+}
+
+.checkout-container {
+  min-height: 800px;
+}
+
+.cartCheck {
+  margin-top: 125px;
+  margin-bottom: 30px;
 }
