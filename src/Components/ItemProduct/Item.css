@@ -1,13 +1,16 @@
+
 .image {
-	height: 300px;
-	width: 250px;
-	padding: 10px;
-	object-fit: cover;
+	height: 375px;
+	width: 300px;
+	padding-top: 5px;
+	object-fit:contain;
 }
-.body {
-	height: 100px;
-	width: 250px;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 25px;
+.body{
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+}
+.card-title{
+	text-align: center;
+	height: 40px;
 }
