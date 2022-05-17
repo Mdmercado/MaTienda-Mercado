@@ -1,0 +1,51 @@
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0;
+  background-color: #212529;
+  color: #fff;
+}
+.footer-subtitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.footer-media_list {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.seccions {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation h4 {
+  text-align: center;
+}
+.navigation ul {
+  list-style: none;
+}
+
+.contact h4 {
+  text-align: center;
+}
+
+.copyright p {
+  margin: 0;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #5e5e71;
+}
